@@ -1,7 +1,7 @@
 @cheeaun's life
 ===============
 
-- 20/06/1985 Born
+- 05/12/1994 Born
 - 1991 Kindergarten
 - 1992-1997 Primary school - SKSJ
 - 1998-2000 Secondary school - SMKTI
