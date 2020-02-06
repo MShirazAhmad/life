@@ -1,9 +1,11 @@
-David Straub's life
+Shiraz Ahmad's life
 ===============
 
-- 1992/04/16 Born
-- 1992/05/24 First movie: "Beauty & the Beast"
-- 1992/12/13 First word: "Hi"
+- 1994/12/05 Born
+- 2000 - 2010 School
+- 2010-2013 High High School
+- 2013-2017 Undergraduation
+- 2017-2019 Postgraduation
 - 1993/02/24 First crawl
 - 1993/05/09 First steps
 - 1993/11/08 Brother Jonathan born
