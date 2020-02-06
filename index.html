@@ -16,8 +16,8 @@ html{
 }
 body{
 	min-height: 100%;
-	color: #fff;
-	background-color: #384047;
+	color: #000;
+	background-color: #D9EFFF;
 	margin: 0;
 	padding: 0;
 	font-size: 12px;
@@ -25,7 +25,7 @@ body{
 	position: relative;
 }
 a{
-	color: #fff;
+	color: #000;
 }
 header{
 	position: fixed;
@@ -60,8 +60,8 @@ h1{
 	min-height: 100%;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	border-left: 1px dashed rgba(255,255,255,.1);
-	color: rgba(255,255,255,.3);
+	border-left: 1px dashed rgba(0,0,0,.1);
+	color: rgba(0,0,0,.8);
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -79,26 +79,27 @@ h1{
 }
 #life .event b{
 	font-weight: normal;
-	color: rgba(255,255,255,.5);
+	color: rgba(0,0,0,.5);
 }
 #life .event .time{
 	display: inline-block;
 	overflow: hidden;
 	height: 0;
-	border: 4px solid #fff;
+	border: 4px solid #f70;
 	border-radius: 4px;
 	margin-right: 10px;
-	opacity: .3;
+	opacity: .6;
 	position: relative;
 	left: -2px;
+	-webkit-transition: opacity 250ms;
 }
 #life .event:hover .time{
-	opacity: .5;
+	opacity: .9;
 }
 </style>
 <header>
 	<h1 id="title">Life</h1>
-	<a href="https://github.com/cheeaun/life">Fork me</a>
+	<a href="//www.davidstraub.com/">Home</a> <a href="https://github.com/straub/life">Source</a>
 </header>
 <div id="life"></div>
 <script>
@@ -191,15 +192,15 @@ h1{
 				};
 			} else if (/^\d+$/.test(time)){ // YYYY
 				data[point + 'Year'] = parseInt(time, 10);
-			} else if (/^\d+\/\d+$/.test(time)){ // MM/YYYY
+			} else if (/^\d+\/\d+$/.test(time)){ // YYYY/MM
 				var t = time.split('/');
-				data[point + 'Month'] = parseInt(t[0], 10);
-				data[point + 'Year'] = parseInt(t[1], 10);
-			} else if (/^\d+\/\d+\/\d+$/.test(time)){ // DD/MM/YYYY
-				var t = time.split('/');
-				data[point + 'Date'] = parseInt(t[0], 10);
+				data[point + 'Year'] = parseInt(t[0], 10);
 				data[point + 'Month'] = parseInt(t[1], 10);
-				data[point + 'Year'] = parseInt(t[2], 10);
+			} else if (/^\d+\/\d+\/\d+$/.test(time)){ // YYYY/MM/DD
+				var t = time.split('/');
+				data[point + 'Year'] = parseInt(t[0], 10);
+				data[point + 'Month'] = parseInt(t[1], 10);
+				data[point + 'Date'] = parseInt(t[2], 10);
 			} else if (/\d\-/.test(time)){ // TIME-TIME
 				var splitTime = time.split('-');
 				var startTime = life.parseTime(splitTime[0]);
@@ -341,3 +342,20 @@ h1{
 	slider.init();
 })();
 </script>
+
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://analytics.straubdev.com/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setCookieDomain', 'www.davidstraub.com']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//analytics.straubdev.com/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Code -->
