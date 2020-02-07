@@ -4,12 +4,9 @@ Shiraz Ahmad's life (Page Under Development)
 - 1994/12/05 Born
 - 2000 - 2010 School
 - 2013/10 - 2017/06 Bachelor of Science (BS), Physics
-- 17/09 – 2019/06 Master of Science (MS), Physics
+- 2017/09 – 2019/06 Master of Science (MS), Physics
 - 2018/07 Established New Business (Tuitionhub.pk)
 - 2019/01 – 2020/05 Graduate Teaching Assistant (Modern Physics)
-- 2010 - 2013 High High School
-- 2013 - 2017 Undergraduation
-- 2017 - 2019 Postgraduation
 - 2019/06 – 2019/07 Research Assistant @ LUMS University. Project Title: Equipping the Physics laboratory at NUTECH
 - 2019/06/21 Air Track Analyzer First Release
 - 2019/08/29 PhysPlot v 1.1 Release
