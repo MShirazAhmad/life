@@ -1,4 +1,4 @@
-Shiraz Ahmad's life
+Shiraz Ahmad's life ([Home](http://shiraz-ahmad.com/))
 ===============
 
 - 1994/12/05 Born
