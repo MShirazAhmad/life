@@ -9,7 +9,7 @@ Shiraz Ahmad's life
 - 2007-2017 In Multan, Pakistan.
 - 2017-~ In Lahore, Pakistan.
 
-## Education
+# Education
 
 - 2007-2010 Higher Secondary School (Physics, Math and Biology)
 - 2010-2012 College (Physics, Chemistry and Math)
