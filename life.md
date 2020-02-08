@@ -5,9 +5,12 @@ Shiraz Ahmad's life
 
 - 12/05/1994 Born in Multan, Pakistan.
 - 12/05/1994-2004 In Multan, Pakistan.
-- 2004-2006 In Vihari, Pakistan.
+- 2005-2006 In Vihari, Pakistan.
 - 2007-06/08/2017 In Multan, Pakistan.
 - 07/08/2017-~ In Lahore, Pakistan.
+
+# Interests on Peak
+
 
 # Education
 
@@ -26,5 +29,3 @@ Shiraz Ahmad's life
 - 13/01/2020 PhysPlot v 1.1.3 Release
 - 09/2019-~ Teaching Assistant @ LUMS University
 - 12/2019-~ Reseach Assistant @ LUMS University
-
-- 01/2001-06/2001,09/2001-01/2002 - event that was interrupted. Use any of the above syntax separated by commas, in chronological order.
