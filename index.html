@@ -2,20 +2,12 @@
 <meta charset="UTF-8">
 <title>Life</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="format-detection" content="telephone=no">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300">
 <style>
-html{
+*{
 	font-family: Open Sans, Helvetica, Arial, sans-serif;
-	cursor: -webkit-grab;
-	cursor: -moz-grab;
-	cursor: grab;
-}
-html{
-	height: 100%;
 }
 body{
-	min-height: 100%;
 	color: #fff;
 	background-color: #384047;
 	margin: 0;
@@ -52,14 +44,29 @@ h1{
 	font-weight: 300;
 	white-space: nowrap;
 }
-#life{
+.life:first-of-type{
 	padding-top: 40px;
+}
+.life:last-of-type{
 	padding-bottom: 5em;
 }
-#life section.year{
-	min-height: 100%;
+.life section.title{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    font-weight: bolder;
+	color: rgba(255,255,255,.5);
+}
+.life section.now{
+	border-left: 1px dashed rgba(255,0,0,0.5);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+.life section.year{
 	box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	border-left: 1px dashed rgba(255,255,255,.1);
 	color: rgba(255,255,255,.3);
 	position: absolute;
@@ -71,31 +78,38 @@ h1{
 	font-weight: 300;
 	white-space: nowrap;
 }
-#life .event{
+.life .event:first-of-type{
+    padding-top: 20px;
+}
+.life .event{
 	padding-right: 20px;
 	padding-bottom: 5px;
 	vertical-align: middle;
 	white-space: nowrap;
 }
-#life .event b{
+.life .event b{
 	font-weight: normal;
 	color: rgba(255,255,255,.5);
 }
-#life .event .times{
-	display: inline-block;
-	margin-right: 10px;
+.life:not(:last-of-type):hover .time {
+    opacity: .7;
 }
-#life .event .time{
+.life:not(:last-of-type):hover section.title {
+    color: rgba(255,255,255,0.8);
+}
+.life .event .time{
+	vertical-align: middle;
 	display: inline-block;
 	overflow: hidden;
 	height: 0;
 	border: 4px solid #fff;
 	border-radius: 4px;
+	margin-right: 10px;
 	opacity: .3;
 	position: relative;
 	left: -2px;
 }
-#life .event:hover .time{
+.life .event:hover .time{
 	opacity: .5;
 }
 </style>
@@ -103,33 +117,24 @@ h1{
 	<h1 id="title">Life</h1>
 	<a href="https://github.com/cheeaun/life">Fork me</a>
 </header>
-<div id="life"></div>
+<div id="life" class="life"></div>
 <script>
 (function(){
+    window.onscroll = function() {
+        var items = document.getElementsByClassName("title");
+        var offset = window.pageXOffset + "px";
+        for (var i=0; i<items.length; i++) {
+            items[i].style.left = offset;
+        }
+    }
 	var life = {
 		$title: document.getElementById('title'),
 		$el: document.getElementById('life'),
-		utils: {
-			extend: function(object){
-				var args = Array.prototype.slice.call(arguments, 1);
-				for (var i=0, source; source=args[i]; i++){
-					if (!source) continue;
-					for (var property in source){
-						object[property] = source[property];
-					}
-				}
-				return object;
-			}
-		},
-		config: {
-			yearLength: 120, // 120px per year
-			hideAge: false, // Hide age from year axis
-			customStylesheetURL: null // Custom stylesheet
-		},
+		yearLength: 120, // 120px per year
 		start: function(){
 			life.loadConfig(function(config){
-				life.config = life.utils.extend(life.config, config);
-				if (life.config.customStylesheetURL) life.injectStylesheet(life.config.customStylesheetURL);
+				if (config.yearLength) life.yearLength = config.yearLength;
+				if (config.customStylesheetURL) life.injectStylesheet(config.customStylesheetURL);
 
 				life.fetch(function(response){
 					var data = life.parse(response);
@@ -168,17 +173,30 @@ h1{
 			xhr.send();
 		},
 		parse: function(response){
-			var list = response.match(/\-\s+[^\n\r]+/ig);
-			var data = [];
+			var list = response.match(/(\-|#+)\s+[^\n\r]+/ig);
+            var data = [];
+            var section = {data : []};
 			list.forEach(function(l){
-				var matches = l.match(/\-\s+([\d\/\-\~,]+)\s(.*)/i);
-				var time = matches[1];
-				var text = matches[2];
-				data.push({
-					time: life.parseTime(time),
-					text: text
-				});
+                var sectionMatch = l.match(/[\#]+\s(.*)/i);
+                if (sectionMatch != undefined) {
+                    if (section.data != undefined && section.data.length > 0) {
+                        data.push(section)
+                    }
+                    section = {title : sectionMatch[1], data : []};
+                }
+				var matches = l.match(/\-\s+([\d\/\-\~]+)\s(.*)/i);
+                if (matches != undefined) {
+				    var time = matches[1];
+				    var text = matches[2];
+				    section.data.push({
+				    	time: life.parseTime(time),
+				    	text: text
+				    });
+                }
 			});
+            if (section.data != undefined) {
+                data.push(section)
+            }
 			return data;
 		},
 		parseTitle: function(response){
@@ -203,26 +221,6 @@ h1{
 				data[point + 'Date'] = parseInt(t[0], 10);
 				data[point + 'Month'] = parseInt(t[1], 10);
 				data[point + 'Year'] = parseInt(t[2], 10);
-			} else if (/\d,/.test(time)){ // TIME-TIME,TIME-TIME
-				var strs = time.split(',');
-				var times = new Array(strs.length);
-				strs.forEach(function(str, i){
-					times[i] = life.parseTime(str);
-				});
-				data.intervals = times;
-				// Copy first and last.
-				var startTime = times[0];
-				var endTime = times[times.length - 1];
-				for (var k in startTime) { data[k] = startTime[k] }
-				if (endTime.endYear != null){
-					data.endDate = endTime.endDate;
-					data.endMonth = endTime.endMonth;
-					data.endYear = endTime.endYear;
-				} else {
-					data.endDate = endTime.startDate;
-					data.endMonth = endTime.startMonth;
-					data.endYear = endTime.startYear;
-				}
 			} else if (/\d\-/.test(time)){ // TIME-TIME
 				var splitTime = time.split('-');
 				var startTime = life.parseTime(splitTime[0]);
@@ -235,16 +233,17 @@ h1{
 				data.endMonth = now.getMonth()+1;
 				data.endDate = now.getDate();
 			}
-			data.title = time.replace(/,/, ', ');
+			data.title = time;
 			return data;
 		},
 		firstYear: null,
-		measureEventLine: function(time){
+		renderEvent: function(d){
 			var firstYear = life.firstYear;
-			var yearLength = life.config.yearLength;
+			var yearLength = life.yearLength;
 			var monthLength = yearLength/12;
 			var dayLength = monthLength/30;
 
+			var time = d.time;
 			var estimate = time.estimate;
 			var startYear = time.startYear;
 			var startMonth = time.startMonth;
@@ -253,6 +252,12 @@ h1{
 			var endMonth = time.endMonth;
 			var endDate = time.endDate;
 			var width = 0;
+
+			// Calculate offset
+			var startTime = new Date(firstYear, 0, 1);
+			var endTime = new Date(startYear, startMonth ? startMonth-1 : 0, startDate || 1);
+			var daysDiff = (endTime - startTime)/(24*60*60*1000);
+			offset = daysDiff*dayLength;
 
 			// Calculate width
 			if (endYear){
@@ -264,7 +269,7 @@ h1{
 				width = daysDiff*dayLength;
 			} else {
 				if (startDate){
-					width = dayLength;
+					width = dayLength
 				} else if (startMonth){
 					width = monthLength;
 				} else {
@@ -272,135 +277,78 @@ h1{
 				}
 			}
 
-			return width;
+			return '<div class="event" style="margin-left: ' + offset.toFixed(2) + 'px"><div class="time" style="width: ' + width.toFixed(2) + 'px"></div><b>' + d.time.title + '</b> ' + d.text + '&nbsp;&nbsp;</div>';
+			return '';
 		},
-		renderEventLines: function(d, buffer, totalLeftOffset){
-			var intervals = d.time.intervals || [d.time];
-			buffer = buffer || [];
-			totalLeftOffset = totalLeftOffset || 0;
-			buffer.push('<div class="times">');
-			intervals.forEach(function(time){
-				var width = life.measureEventLine(time);
-				var offset = life.measureTimeOffset(time);
-				var marginLeft = offset - totalLeftOffset;
-				buffer.push('<div class="time" style="width: ');
-				buffer.push(width.toFixed(2));
-				buffer.push('px; margin-left: ');
-				buffer.push(marginLeft.toFixed(2));
-				buffer.push('px"></div>');
+        insertAfter: function(newElement,targetElement) {
+            //target is what you want it to go after. Look for this elements parent.
+            var parent = targetElement.parentNode;
 
-				// Add twice the border width.
-				var outerWidth = width + 2 * 4;
-				totalLeftOffset += outerWidth + marginLeft;
-			});
-			buffer.push('</div>');
-			return buffer;
-		},
-		measureTimeOffset: function(time){
-			var firstYear = life.firstYear;
-			var yearLength = life.config.yearLength;
-			var monthLength = yearLength/12;
-			var dayLength = monthLength/30;
-
-			var startYear = time.startYear;
-			var startMonth = time.startMonth;
-			var startDate = time.startDate;
-
-			var startTime = new Date(firstYear, 0, 1);
-			var endTime = new Date(startYear, startMonth ? startMonth-1 : 0, startDate || 1);
-			var daysDiff = (endTime - startTime)/(24*60*60*1000);
-			return daysDiff*dayLength;
-		},
-		renderEvent: function(d){
-			var time = d.time;
-
-			// Calculate offset
-			var offset = life.measureTimeOffset(time);
-
-			// Parse Markdown links in the text
-			// credit: http://stackoverflow.com/a/9268827
-			var link = null;
-			while(link = d.text.match(/\[([^\]]+)\]\(([^)"]+)(?: \"([^\"]+)\")?\)/)) {
-				var link_attr = "";
-				if (link[3] !== undefined) {
-					link_attr = " title='" + link[3] + "'";
-				}
-				d.text = d.text.replace(link[0], "<a href='" + link[2] + "'" + link_attr + ">" + link[1] + "</a>");
-			}
-
-			// Use a buffer and join only once to reduce string concat memory waste.
-			var buffer = [];
-			buffer.push('<div class="event" style="margin-left: ' + offset.toFixed(2) + 'px">');
-			life.renderEventLines(d, buffer, offset);
-			buffer.push('<b>' + d.time.title + '</b> ' + d.text + '&nbsp;&nbsp;');
-			buffer.push('</div>');
-			return buffer.join('');
-		},
-		renderYears: function(firstYear, lastYear){
-			var dayLength = life.config.yearLength/12/30;
-			var html = '';
-			var days = 0;
-			var hideAge = life.config.hideAge;
-			for (var y=firstYear, age = 0; y<=lastYear+1; y++, age++){
-				html += '<section class="year" style="left: ' + (days*dayLength).toFixed(2) + 'px">'
-					+ y + (hideAge ? '' : (' (' + age + ')'))
-					+ '</section>';
-				days += (y % 4 == 0) ? 366 : 365;
-			}
-			return html;
-		},
+            //if the parents lastchild is the targetElement...
+            if(parent.lastchild == targetElement) {
+                //add the newElement after the target element.
+                parent.appendChild(newElement);
+            } else {
+                // else the target has siblings, insert the new element between the target and it's next sibling.
+                parent.insertBefore(newElement, targetElement.nextSibling);
+            }
+        },
 		render: function(title, data){
 			document.title = title;
 			life.$title.innerHTML = title;
 
-			// Get the first and last year for the year axis
-			var firstYear = new Date().getFullYear();
-			var lastYear = firstYear;
-			data.forEach(function(d){
-				var time = d.time;
-				var startYear = time.startYear;
-				var endYear = time.endYear;
-				if (startYear && startYear < firstYear) firstYear = startYear;
-				if (endYear && endYear > lastYear) lastYear = endYear;
-			});
-			life.firstYear = firstYear;
+            var firstYear = undefined;
+            data.forEach(function(s) {
+                s.data.forEach(function(i) {
+                    console.log(firstYear, i.time.startYear);
+                    if (firstYear == undefined || firstYear > i.time.startYear) {
+                        firstYear = i.time.startYear;
+                    }
+                });
+            });
+            life.firstYear = firstYear;
 
-			var html = life.renderYears(firstYear, lastYear);
-			data.forEach(function(d){
-				html += life.renderEvent(d);
-			});
-			life.$el.innerHTML = html;
-		}
-	};
+            var now = new Date();
+			var nowYear = now.getFullYear();
+			var dayLength = life.yearLength/12/30;
 
-	var slider = {
-		startingMousePostition: {},
-		startingPagePosition: {},
-		init: function(){
-			window.addEventListener('mousedown', function(event){
-				slider.startingMousePostition = {
-					x: event.clientX,
-					y: event.clientY
-				};
-				slider.startingPagePosition = {
-					x: window.pageXOffset,
-					y: window.pageYOffset
-				};
-				window.addEventListener('mousemove', slider.slide);
-			});
-			window.addEventListener('mouseup', function(event){
-				window.removeEventListener('mousemove', slider.slide);
-			});
+			html = '';
+			var days = 0;
+
+			for (var y=firstYear, age = 0; y<=nowYear+1; y++, age++){
+				html += '<section class="year" style="left: ' + (days*dayLength) + 'px">' +
+					y + ' (' + age + ')' +
+					'</section>';
+				days += (y % 4 == 0) ? 366 : 365;
+			}
+
+            var nowDays = (now.getTime() - new Date(firstYear, 1, 1).getTime()) / (24*60*60*1000)
+            html += '<section class="now" style="left: ' + (nowDays*dayLength) + 'px">&nbsp;</section>';
+
+            var curNode = life.$el;
+            var baseNode = curNode.cloneNode(true);
+			curNode.innerHTML = html;
+            life.insertAfter(baseNode, curNode);
+            curNode = baseNode;
+            baseNode = curNode.cloneNode(true);
+            html = '';
+
+            for (s in data) {
+                if (data[s].title != undefined) {
+                    html += '<section class="title">' + data[s].title + '</section>';
+                }
+			    data[s].data.forEach(function(d){
+			    	html += life.renderEvent(d);
+			    });
+			    curNode.innerHTML = html;
+                life.insertAfter(baseNode, curNode);
+                curNode = baseNode;
+                baseNode = curNode.cloneNode(true);
+                html = '';
+            }
 		},
-		slide: function(event){
-			event.preventDefault();
-			var x = slider.startingPagePosition.x + (slider.startingMousePostition.x - event.clientX);
-			var y = slider.startingPagePosition.y + (slider.startingMousePostition.y - event.clientY);
-			window.scrollTo(x, y);
-		}
-	};
+	}
 
 	life.start();
-	slider.init();
 })();
 </script>
