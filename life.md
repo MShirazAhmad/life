@@ -27,5 +27,3 @@ Shiraz Ahmad's life
 - 13/01/2020 PhysPlot v 1.1.3 Release
 - 09/2019-~ Teaching Assistant @ LUMS University
 - 12/2019-~ Reseach Assistant @ LUMS University
-
-- 01/2001-06/2001,09/2001-01/2002 - event that was interrupted. Use any of the above syntax separated by commas, in chronological order.
