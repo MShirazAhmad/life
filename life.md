@@ -1,6 +1,6 @@
 Shiraz Ahmad's life
 ===============
-
+- 24/02/1955 Born
 - 1994/12/05 Born
 - 2013/10-2017/06 Bachelor of Science (BS), Physics
 - 2017/09-2019/06 Master of Science (MS), Physics
@@ -13,4 +13,4 @@ Shiraz Ahmad's life
 - 2019/08,2019/12 External Instructor (Applied Physics) at FAST University
 - 2020/01/13 PhysPlot v 1.1.3 Release
 - 2019/09 Teaching Assistant at LUMS University
-- 2019/12 Reseach Assistant at LUMS University.
+- 2019/12 Reseach Assistant at LUMS University
