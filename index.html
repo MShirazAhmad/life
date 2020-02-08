@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<!-- saved from url=(0036)http://www.stickyrice.net/apps/life/ -->
-<html data-blockbyte-bs-uid="87016"><script type="text/javascript" charset="utf-8" id="zm-extension" src="chrome-extension://fdcgdnkidjaadafnichfpabhfomcebme/scripts/webrtc-patch.js" async=""></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Robin's life</title>
+<meta charset="UTF-8">
+<title>Life</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="format-detection" content="telephone=no">
-<link rel="stylesheet" href="./Robin&#39;s life_files/css">
-
-<!-- This has been hacked to make it possible to process multiple lives by passing the info through the life variable in the URL. Just adjust the name.config json and name.css and name.md files accordingly -->
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300">
 <style>
 html{
 	font-family: Open Sans, Helvetica, Arial, sans-serif;
@@ -20,16 +16,16 @@ html{
 }
 body{
 	min-height: 100%;
-	color: #fff;
-	background-color: #384047;
+	color: #000;
+	background-color: #EEEEEE;
 	margin: 0;
 	padding: 0;
-	font-size: 12px;
+	font-size: 13px;
 	-webkit-text-size-adjust: none;
 	position: relative;
 }
 a{
-	color: #fff;
+	color: #000;
 }
 header{
 	position: fixed;
@@ -64,8 +60,8 @@ h1{
 	min-height: 100%;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	border-left: 1px dashed rgba(255,255,255,.1);
-	color: rgba(255,255,255,.3);
+	border-left: 1px dashed rgba(0,0,0,.1);
+	color: rgba(0,0,0,.8);
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -83,31 +79,29 @@ h1{
 }
 #life .event b{
 	font-weight: normal;
-	color: rgba(255,255,255,.5);
+	color: rgba(0,0,0,.5);
 }
 #life .event .time{
 	display: inline-block;
 	overflow: hidden;
 	height: 0;
-	border: 4px solid #838D99;
+	border: 4px solid #f70;
 	border-radius: 4px;
 	margin-right: 10px;
 	opacity: .6;
 	position: relative;
 	left: -2px;
+	-webkit-transition: opacity 250ms;
 }
 #life .event:hover .time{
-	opacity: .5;
+	opacity: .9;
 }
 </style>
-
-
-<style class="blockbyte-bs-style" data-name="content">body>div#blockbyte-bs-indicator>div{opacity:0;pointer-events:none}body>iframe#blockbyte-bs-sidebar.blockbyte-bs-visible,body>iframe#blockbyte-bs-overlay.blockbyte-bs-visible{opacity:1;pointer-events:auto}body.blockbyte-bs-noscroll{overflow:hidden !important}body>div#blockbyte-bs-indicator>div{position:absolute;transform:translate3d(-40px, 0, 0);top:0;left:0;width:40px !important;height:100%;background:rgba(0,0,0,0.5);border-radius:0 10px 10px 0;transition:opacity 0.3s, transform 0.3s;z-index:2}body>div#blockbyte-bs-indicator>div>span{-webkit-mask:no-repeat center/32px;-webkit-mask-image:url(chrome-extension://jdbnofccmhefkmjbkkdkfiicjkgofkdh/img/icon-bookmark.svg);background-color:#ffffff;position:absolute;display:block;top:0;left:0;width:100%;height:100%}body>div#blockbyte-bs-indicator[data-pos='right']{left:auto;right:0}body>div#blockbyte-bs-indicator[data-pos='right']>div{transform:translate3d(40px, 0, 0);left:auto;right:0;border-radius:10px 0 0 10px}body>div#blockbyte-bs-indicator.blockbyte-bs-fullHeight>div{border-radius:0}body>div#blockbyte-bs-indicator.blockbyte-bs-hover>div{transform:translate3d(0, 0, 0);opacity:1}body>div#blockbyte-bs-indicator[data-pos='left'].blockbyte-bs-has-lsb{height:100% !important;top:0 !important}body>div#blockbyte-bs-indicator[data-pos='left'].blockbyte-bs-has-lsb>div{background:transparent}body>div#blockbyte-bs-indicator[data-pos='left'].blockbyte-bs-has-lsb>div>span{-webkit-mask-position-y:20px}body>iframe#blockbyte-bs-sidebar{width:350px;max-width:none;height:0;z-index:2147483646;background-color:rgba(255,255,255,0.8) !important;border:none;display:block !important;transform:translate3d(-350px, 0, 0);will-change:width, height, opacity, transform;transition:width 0s 0.3s, height 0s 0.3s, opacity 0.3s, transform 0.3s}body>iframe#blockbyte-bs-sidebar[data-pos='right']{left:auto;right:0;transform:translate3d(350px, 0, 0)}body>iframe#blockbyte-bs-sidebar.blockbyte-bs-visible{width:calc(100% + 350px);height:100%;transform:translate3d(0, 0, 0);transition:opacity 0.3s, transform 0.3s}body>iframe#blockbyte-bs-sidebar.blockbyte-bs-hideMask{background:none !important}body>iframe#blockbyte-bs-sidebar.blockbyte-bs-hideMask:not(.blockbyte-bs-hover){width:calc(350px + 50px)}body>iframe#blockbyte-bs-overlay{width:100%;max-width:none;height:100%;z-index:2147483647;border:none;background:rgba(0,0,0,0.5) !important;transition:opacity 0.3s}
-</style></head><body data-gr-c-s-loaded="true"><header>
-	<h1 id="title">Robin's life</h1>
-	<a href="https://github.com/cheeaun/life">Fork me</a>
+<header>
+	<h1 id="title">Time Line</h1>
+	<a href="//shiraz-ahmad.com/">Home</a>
 </header>
-<div id="life"><section class="year age_0" style="left: 0.00px">1965</section><section class="year age_1" style="left: 60.83px">1966</section><section class="year age_2" style="left: 121.67px">1967</section><section class="year age_3" style="left: 182.50px">1968</section><section class="year age_4" style="left: 243.50px">1969</section><section class="year age_5" style="left: 304.33px">1970</section><section class="year age_6" style="left: 365.17px">1971</section><section class="year age_7" style="left: 426.00px">1972</section><section class="year age_8" style="left: 487.00px">1973</section><section class="year age_9" style="left: 547.83px">1974</section><section class="year age_10" style="left: 608.67px">1975</section><section class="year age_11" style="left: 669.50px">1976</section><section class="year age_12" style="left: 730.50px">1977</section><section class="year age_13" style="left: 791.33px">1978</section><section class="year age_14" style="left: 852.17px">1979</section><section class="year age_15" style="left: 913.00px">1980</section><section class="year age_16" style="left: 974.00px">1981</section><section class="year age_17" style="left: 1034.83px">1982</section><section class="year age_18" style="left: 1095.67px">1983</section><section class="year age_19" style="left: 1156.50px">1984</section><section class="year age_20" style="left: 1217.50px">1985</section><section class="year age_21" style="left: 1278.33px">1986</section><section class="year age_22" style="left: 1339.17px">1987</section><section class="year age_23" style="left: 1400.00px">1988</section><section class="year age_24" style="left: 1461.00px">1989</section><section class="year age_25" style="left: 1521.83px">1990</section><section class="year age_26" style="left: 1582.67px">1991</section><section class="year age_27" style="left: 1643.50px">1992</section><section class="year age_28" style="left: 1704.50px">1993</section><section class="year age_29" style="left: 1765.33px">1994</section><section class="year age_30" style="left: 1826.17px">1995</section><section class="year age_31" style="left: 1887.00px">1996</section><section class="year age_32" style="left: 1948.00px">1997</section><section class="year age_33" style="left: 2008.83px">1998</section><section class="year age_34" style="left: 2069.67px">1999</section><section class="year age_35" style="left: 2130.50px">2000</section><section class="year age_36" style="left: 2191.50px">2001</section><section class="year age_37" style="left: 2252.33px">2002</section><section class="year age_38" style="left: 2313.17px">2003</section><section class="year age_39" style="left: 2374.00px">2004</section><section class="year age_40" style="left: 2435.00px">2005</section><section class="year age_41" style="left: 2495.83px">2006</section><section class="year age_42" style="left: 2556.67px">2007</section><section class="year age_43" style="left: 2617.50px">2008</section><section class="year age_44" style="left: 2678.50px">2009</section><section class="year age_45" style="left: 2739.33px">2010</section><section class="year age_46" style="left: 2800.17px">2011</section><section class="year age_47" style="left: 2861.00px">2012</section><section class="year age_48" style="left: 2922.00px">2013</section><section class="year age_49" style="left: 2982.83px">2014</section><section class="year age_50" style="left: 3043.67px">2015</section><section class="year age_51" style="left: 3104.50px">2016</section><section class="year age_52" style="left: 3165.50px">2017</section><section class="year age_53" style="left: 3226.33px">2018</section><section class="year age_54" style="left: 3287.17px">2019</section><section class="year age_55" style="left: 3348.00px">2020</section><section class="year age_56" style="left: 3409.00px">2021</section><div class="event c_1" style="margin-left: 41.17px"><div class="time" style="width: 1404.33px"></div><b>05/09/1965-09/1988</b> Canada&nbsp;&nbsp;</div><div class="event c_2" style="margin-left: 1440.67px"><div class="time" style="width: 309.17px"></div><b>09/1988-09/1993</b> UK&nbsp;&nbsp;</div><div class="event c_3" style="margin-left: 1745.00px"><div class="time" style="width: 1298.50px"></div><b>09/1993-2014</b> Singapore&nbsp;&nbsp;</div><div class="event c_4" style="margin-left: 41.17px"><div class="time" style="width: 0.17px"></div><b>05/09/1965</b> Born in Montreal&nbsp;&nbsp;</div><div class="event c_5" style="margin-left: 301.50px"><div class="time" style="width: 0.17px"></div><b>15/12/1969</b> Kicked out of ballet school&nbsp;&nbsp;</div><div class="event c_6" style="margin-left: 344.83px"><div class="time" style="width: 415.67px"></div><b>09/1970-06/1977</b> Allancroft Elementary School&nbsp;&nbsp;</div><div class="event c_7" style="margin-left: 771.00px"><div class="time" style="width: 293.83px"></div><b>09/1977-06/1982</b> Beaconsfield High School&nbsp;&nbsp;</div><div class="event c_8" style="margin-left: 1070.17px"><div class="time" style="width: 5.00px"></div><b>08/1982</b> Moved to Ottawa&nbsp;&nbsp;</div><div class="event c_9" style="margin-left: 1075.33px"><div class="time" style="width: 410.67px"></div><b>09/1982-05/1989</b> U of Ottawa&nbsp;&nbsp;</div><div class="event c_10" style="margin-left: 1075.33px"><div class="time" style="width: 45.33px"></div><b>09/1982-05/1983</b> Pre-U&nbsp;&nbsp;</div><div class="event c_11" style="margin-left: 1136.17px"><div class="time" style="width: 45.50px"></div><b>09/1983-05/1984</b> Biology&nbsp;&nbsp;</div><div class="event c_12" style="margin-left: 1176.67px"><div class="time" style="width: 65.83px"></div><b>05/1984-05/1985</b> VP Students Union&nbsp;&nbsp;</div><div class="event c_13" style="margin-left: 1258.00px"><div class="time" style="width: 182.50px"></div><b>09/1985-08/1988</b> Business Administration&nbsp;&nbsp;</div><div class="event c_14" style="margin-left: 1440.67px"><div class="time" style="width: 5.00px"></div><b>09/1988</b> Moved to Birmingham, UK&nbsp;&nbsp;</div><div class="event c_15" style="margin-left: 1445.67px"><div class="time" style="width: 40.33px"></div><b>10/1988-05/1989</b> Aston Business School (Exchange)&nbsp;&nbsp;</div><div class="event c_16" style="margin-left: 1491.17px"><div class="time" style="width: 5.00px"></div><b>07/1989</b> Moved to Manchester&nbsp;&nbsp;</div><div class="event c_17" style="margin-left: 1491.17px"><div class="time" style="width: 60.67px"></div><b>07/1989-06/1990</b> ICL PLC&nbsp;&nbsp;</div><div class="event c_18" style="margin-left: 1547.00px"><div class="time" style="width: 1161.49px"></div><b>06/1990-06/2009</b> Banking&nbsp;&nbsp;</div><div class="event c_19" style="margin-left: 1547.00px"><div class="time" style="width: 70.83px"></div><b>06/1990-07/1991</b> Barclays Bank, Bolton&nbsp;&nbsp;</div><div class="event c_20" style="margin-left: 1618.00px"><div class="time" style="width: 5.00px"></div><b>08/1991</b> Moved to London&nbsp;&nbsp;</div><div class="event c_21" style="margin-left: 1618.00px"><div class="time" style="width: 126.83px"></div><b>08/1991-08/1993</b> Barclays Bank, London&nbsp;&nbsp;</div><div class="event c_22" style="margin-left: 1745.00px"><div class="time" style="width: 5.00px"></div><b>09/1993</b> Moved to Singapore&nbsp;&nbsp;</div><div class="event c_23" style="margin-left: 1745.00px"><div class="time" style="width: 187.50px"></div><b>09/1993-09/1996</b> Barclays Bank, Singapore&nbsp;&nbsp;</div><div class="event c_24" style="margin-left: 1826.17px"><div class="time" style="width: 60.00px"></div><b>~1995</b> Hong Kong (3 month placement w/McKinsey)&nbsp;&nbsp;</div><div class="event c_25" style="margin-left: 1932.67px"><div class="time" style="width: 96.00px"></div><b>10/1996-04/1998</b> CIBC, Singapore&nbsp;&nbsp;</div><div class="event c_26" style="margin-left: 2028.83px"><div class="time" style="width: 522.50px"></div><b>05/1998-11/2006</b> Credit Suisse &amp; CSFB&nbsp;&nbsp;</div><div class="event c_27" style="margin-left: 2556.67px"><div class="time" style="width: 151.83px"></div><b>01/2007-06/2009</b> Barclays Capital&nbsp;&nbsp;</div><div class="event c_28" style="margin-left: 2739.33px"><div class="time" style="width: 304.17px"></div><b>01/2010-2014</b> Savanant&nbsp;&nbsp;</div></div>
+<div id="life"></div>
 <script>
 (function(){
 	var life = {
@@ -134,7 +128,6 @@ h1{
 			life.loadConfig(function(config){
 				life.config = life.utils.extend(life.config, config);
 				if (life.config.customStylesheetURL) life.injectStylesheet(life.config.customStylesheetURL);
-				if (life.config.customImage) life.injectFBImage(life.config.customImage);
 
 				life.fetch(function(response){
 					var data = life.parse(response);
@@ -145,8 +138,7 @@ h1{
 		},
 		loadConfig: function(fn){
 			var xhr = new XMLHttpRequest();
-			var jsonConfig = life.getParameterByName('life')+'.config.json';
-			xhr.open('GET', jsonConfig , true);
+			xhr.open('GET', 'config.json', true);
 			xhr.onload = function(){
 				if (xhr.status == 200){
 					fn(JSON.parse(xhr.responseText));
@@ -159,28 +151,15 @@ h1{
 			};
 			xhr.send();
 		},
-		getParameterByName: function(name){
-			name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-			var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-			results = regex.exec(location.search);
-			return results === null ? "robin" : decodeURIComponent(results[1].replace(/\+/g, " "));
-		},
 		injectStylesheet: function(url){
 			var link = document.createElement('link');
 			link.rel = 'stylesheet';
 			link.href = url;
 			document.body.appendChild(link);
 		},
-		injectFBImage: function(url){
-			var link = document.createElement('link');
-			link.rel = 'image_src';
-			link.href = url;
-			document.body.appendChild(link);
-		},
 		fetch: function(fn){
 			var xhr = new XMLHttpRequest();
-			var lifeInfo = life.config.lifeInfo;
-			xhr.open('GET', lifeInfo , true);
+			xhr.open('GET', 'life.md', true);
 			xhr.onload = function(){
 				if (xhr.status == 200) fn(xhr.responseText);
 			};
@@ -213,15 +192,15 @@ h1{
 				};
 			} else if (/^\d+$/.test(time)){ // YYYY
 				data[point + 'Year'] = parseInt(time, 10);
-			} else if (/^\d+\/\d+$/.test(time)){ // MM/YYYY
+			} else if (/^\d+\/\d+$/.test(time)){ // YYYY/MM
 				var t = time.split('/');
-				data[point + 'Month'] = parseInt(t[0], 10);
-				data[point + 'Year'] = parseInt(t[1], 10);
-			} else if (/^\d+\/\d+\/\d+$/.test(time)){ // DD/MM/YYYY
-				var t = time.split('/');
-				data[point + 'Date'] = parseInt(t[0], 10);
+				data[point + 'Year'] = parseInt(t[0], 10);
 				data[point + 'Month'] = parseInt(t[1], 10);
-				data[point + 'Year'] = parseInt(t[2], 10);
+			} else if (/^\d+\/\d+\/\d+$/.test(time)){ // YYYY/MM/DD
+				var t = time.split('/');
+				data[point + 'Year'] = parseInt(t[0], 10);
+				data[point + 'Month'] = parseInt(t[1], 10);
+				data[point + 'Date'] = parseInt(t[2], 10);
 			} else if (/\d\-/.test(time)){ // TIME-TIME
 				var splitTime = time.split('-');
 				var startTime = life.parseTime(splitTime[0]);
@@ -238,7 +217,7 @@ h1{
 			return data;
 		},
 		firstYear: null,
-		renderEvent: function(d,nd){
+		renderEvent: function(d){
 			var firstYear = life.firstYear;
 			var yearLength = life.config.yearLength;
 			var monthLength = yearLength/12;
@@ -289,7 +268,7 @@ h1{
 				d.text = d.text.replace(link[0], "<a href='" + link[2] + "'" + link_attr + ">" + link[1] + "</a>");
 			}
 
-			return '<div class="event c_'+ nd +'" style="margin-left: ' + offset.toFixed(2) + 'px">'
+			return '<div class="event" style="margin-left: ' + offset.toFixed(2) + 'px">'
 				+ '<div class="time" style="width: ' + width.toFixed(2) + 'px"></div>'
 				+ '<b>' + d.time.title + '</b> ' + d.text + '&nbsp;&nbsp;'
 				+ '</div>';
@@ -301,7 +280,7 @@ h1{
 			var days = 0;
 			var hideAge = life.config.hideAge;
 			for (var y=firstYear, age = 0; y<=lastYear+1; y++, age++){
-				html += '<section class="year age_' + age + '" style="left: ' + (days*dayLength).toFixed(2) + 'px">'
+				html += '<section class="year" style="left: ' + (days*dayLength).toFixed(2) + 'px">'
 					+ y + (hideAge ? '' : (' (' + age + ')'))
 					+ '</section>';
 				days += (y % 4 == 0) ? 366 : 365;
@@ -325,10 +304,8 @@ h1{
 			life.firstYear = firstYear;
 
 			var html = life.renderYears(firstYear, lastYear);
-			var counter = 0;
 			data.forEach(function(d){
-			    counter = counter + 1;
-				html += life.renderEvent(d,counter);
+				html += life.renderEvent(d);
 			});
 			life.$el.innerHTML = html;
 		}
@@ -364,4 +341,21 @@ h1{
 	life.start();
 	slider.init();
 })();
-</script><link rel="stylesheet" href="./Robin&#39;s life_files/robin.css"><link rel="image_src" href="http://www.stickyrice.net/apps/life/profilepic.jpg"><iframe id="blockbyte-bs-sidebar" class="notranslate" data-pos="left" src="./Robin&#39;s life_files/saved_resource.html"></iframe><div id="blockbyte-bs-indicator" class="blockbyte-bs-fullHeight blockbyte-bs-visible" data-pos="left" style="width: 1px; height: 100%; top: 0%;"><div><span></span></div></div></body></html>
+</script>
+
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://analytics.straubdev.com/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setCookieDomain', 'shiraz-ahmad.com']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//analytics.straubdev.com/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Code -->
