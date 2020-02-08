@@ -3,7 +3,7 @@ Shiraz Ahmad's life
 
 - 12/05/1994 Born
 
-#Education
+# Education
 
 - 10/2013-06/2017 Bachelor of Science (BS), Physics
 - 09/2017-06/2019 Master of Science (MS), Physics
