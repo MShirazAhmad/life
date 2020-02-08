@@ -11,9 +11,9 @@ Shiraz Ahmad's life
 - 01/2019-05/2020 Graduate Teaching Assistant (Modern Physics)
 - 06/2019-07/2019 Research Assistant at LUMS University. Project Title: Equipping the Physics laboratory at NUTECH
 - 06/21/2019 Air Track Analyzer First Release
-- 08/29/2019 hysPlot v 1.1 Release
+- 29/29/2019 PhysPlot v 1.1 Release
 - 07/2019-08/2019 Supervised Research Internee in Graduate Physics Lab
 - 08/2019-12/2019 External Instructor (Applied Physics) at FAST University
-- 01/13/2020 PhysPlot v 1.1.3 Release
+- 13/01/2020 PhysPlot v 1.1.3 Release
 - 09/2019 Teaching Assistant at LUMS University
 - 12/2019 Reseach Assistant at LUMS University
