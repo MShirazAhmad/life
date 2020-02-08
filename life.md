@@ -1,6 +1,8 @@
 Shiraz Ahmad's life
 ===============
+# Residence
 
+- 12/05/1994-~ In Pakistan
 - 12/05/1994 Born
 
 # Education
