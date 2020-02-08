@@ -15,6 +15,7 @@ Shiraz Ahmad's life
 - 2007-2010 Higher Secondary School (Physics, Math and Biology)
 - 2010-2012 College (Physics, Chemistry and Math)
 - 10/2013-06/2017 Bachelor of Science - BS, Physics
+- 31/12/2013-31/07/2017 Communication Systems Operator @ Nawa-i-Waqt, Multan.
 - 09/2017-06/2019 Master of Science - MS, Physics
 - 07/2018 Established New Business (Tuitionhub.pk)
 - 01/2019-05/2020 Graduate Teaching Assistant (Modern Physics)
