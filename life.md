@@ -1,9 +1,7 @@
 Shiraz Ahmad's life
 ===============
 
-# Residence
-Residence
-------
+# places i've lived
 
 - 12/05/1994-~ In Pakistan
 - 12/05/1994 Born in Multan, Pakistan.
