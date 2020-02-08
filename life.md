@@ -17,5 +17,5 @@ Shiraz Ahmad's life
 - 07/2019-08/2019 Supervised Research Internee in Graduate Physics Lab
 - 08/2019-12/2019 External Instructor (Applied Physics) at FAST University
 - 13/01/2020 PhysPlot v 1.1.3 Release
-- 09/2019 Teaching Assistant at LUMS University
-- 12/2019 Reseach Assistant at LUMS University
+- 09/2019-~ Teaching Assistant at LUMS University
+- 12/2019-~ Reseach Assistant at LUMS University
