@@ -1,16 +1,42 @@
 Shiraz Ahmad's life
 ===============
 
-- 12/05/1994 Born
-- 10/2013-06/2017 Bachelor of Science (BS), Physics
-- 09/2017-06/2019 Master of Science (MS), Physics
-- 07/2018 Established New Business (Tuitionhub.pk)
-- 01/2019-05/2020 Graduate Teaching Assistant (Modern Physics)
-- 06/2019-07/2019 Research Assistant at LUMS University. Project Title: Equipping the Physics laboratory at NUTECH
-- 06/21/2019 Air Track Analyzer First Release
-- 08/29/2019 hysPlot v 1.1 Release
-- 07/2019-08/2019 Supervised Research Internee in Graduate Physics Lab
-- 08/2019-12/2019 External Instructor (Applied Physics) at FAST University
-- 01/13/2020 PhysPlot v 1.1.3 Release
-- 09/2019 Teaching Assistant at LUMS University
-- 12/2019 Reseach Assistant at LUMS University
+
+- 1992/04/16 Born
+- 1992/05/24 First movie: "Beauty & the Beast"
+- 1992/12/13 First word: "Hi"
+- 1993/02/24 First crawl
+- 1993/05/09 First steps
+- 1993/11/08 Brother Jonathan born
+- 1994-2010/06 Homeschooled
+- 1994/07 First used a computer
+- 1994/11 Learned to read
+- 1996/05/29 Brother James born
+- 2001/10/09 Grandpa Robbins (maternal) passed away
+- 2001/10/20 Brother Pete marries Mandy
+- 2004/07/26 Kaitlyn (first niece) born to Pete & Mandy
+- 2006/05/21 Confirmed member of WELS Faith Evangelical Lutheran Church
+- 2006/10/07 Brother Steve marries Stephenie
+- 2007/09-2007/12/25 Lived in Irvine, CA
+- 2008/07/31 Langdon (first nephew) born to Steve & Stephenie
+- 2008/09-2010/06 Took classes at Chelsea High School
+- 2008/10/02 Noah (godson) born to Pete & Mandy
+- 2008/12/23 First tweet
+- 2009/03/13 First Facebook status
+- 2009/05/03 Took third place in class-BCD Oratory at state Forensics competition
+- 2009/05/22 "Weird Law" speech at underclassmen awards
+- 2010/02-2010/03 First computer build
+- 2010/04/17 "Teenagers" speech at "Puttin' on the Hits"
+- 2010/04/18 Announced homecoming court candidates at game
+- 2010/06/22 Owen born to Pete & Mandy
+- 2010/07-2014/01/15 ePrize
+- 2010/07-2010/10 Interface Development Intern
+- 2010/11-2012/07 Associate Software Engineer
+- 2011/01/09 Charlotte born to Steve & Stephenie
+- 2011/11 Bought first car
+- 2012/01 ePrize Rookie of the Year, 2011
+- 2012/07/16 Moved to Royal Oak, MI
+- 2012/08-~ Software Engineer
+- 2013/01 ePrize Knowledge Award, 2012 - Top 5
+- 2014/01/16-~ HelloWorld (formerly ePrize)
+- 2015/01/15 HelloWorld "What Creativity Looks Like" Award
