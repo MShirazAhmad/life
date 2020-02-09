@@ -15,7 +15,7 @@ Shiraz Ahmad's life
 - 2013-2017 C++ Programming and Digital/Analog Electronics
 - 2017-2018 Exploring Linux OS
 - 2018-2019 Data Analysis with MATLAB and Python Software Development/ Business
-- 2019-2020 On Mission to Become Data Scientist
+- 2019-~2020 On Mission to Become Data Scientist
 
 # Education
 
