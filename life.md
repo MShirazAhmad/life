@@ -4,12 +4,10 @@ Shiraz Ahmad's life
 # Residence
 
 - 12/05/1994 Born
-- 12/05/1994-~ In Pakistan
-- 12/05/1994-~ In Multan
-- 12/05/1994-2004 In Multan
-- 2004-2007 In Vihari
-- 2007-2017 In Multan
-- 2017-~ In Lahore
+- 12/05/1994-2004 In Multan, PK
+- 2004-2007 In Vihari, PK
+- 2007-2017 In Multan, PK
+- 2017-~ In Lahore, PK
 
 # Education
 
